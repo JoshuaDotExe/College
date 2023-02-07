@@ -1,0 +1,16 @@
+.centered{
+    display: flex;
+    justify-content: center;
+}
+
+.pyramidHeader{
+    font-weight: 1;
+}
+
+.shapeT {
+	width: 30em;
+    height: 30em;
+    background: red;
+    /* transform: perspective(30em) rotateX(60deg); */
+    margin: 50px;
+}
