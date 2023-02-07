@@ -6,34 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="foodPy.css">
-    <script src="foodPy.js"></script>
+    <script src="foodPy.js" defer></script>
 </head>
 <body>
     <h1 class="centered" id="pyramidHeader"">My Pyramid</h1>
     <div class="centered pyramid_container">
         <div class="shapeT tier1" id="t1">
-            <button class="value_button" type="button">-</button>
-            <button class="value_button" type="button">+</button>
+            <button class="value_button" type="button" id="b1M" onclick="button_handler(-1, 'dispVal1')"">-</button>
+            <div class="disp_val" id="dispVal1">0</div>
+            <button class="value_button" type="button" id="b1P" onclick="button_handler(1, 'dispVal1')">+</button>
         </div>
         <div class="shapeT tier2" id="t2">
-            <button class="value_button" type="button">-</button>
-            <button class="value_button" type="button">+</button>
+            <button class="value_button" type="button" id="b2M" onclick="button_handler(-1, 'dispVal2')">-</button>
+            <div class="disp_val" id="dispVal2">0</div>
+            <button class="value_button" type="button" id="b2P" onclick="button_handler(1, 'dispVal2')">+</button>
         </div>
         <div class="shapeT tier3" id="t3">
-            <button class="value_button" type="button">-</button>
-            <button class="value_button" type="button">+</button>
+            <button class="value_button" type="button" id="b3M" onclick="button_handler(-1, 'dispVal3')">-</button>
+            <div class="disp_val" id="dispVal3">0</div>
+            <button class="value_button" type="button" id="b3P" onclick="button_handler(1, 'dispVal3')">+</button>
         </div>
         <div class="shapeT tier4" id="t4">
-            <button class="value_button" type="button">-</button>
-            <button class="value_button" type="button">+</button>
+            <button class="value_button" type="button" id="b4M" onclick="button_handler(-1, 'dispVal4')">-</button>
+            <div class="disp_val" id="dispVal4">0</div>
+            <button class="value_button" type="button" id="b4P" onclick="button_handler(1, 'dispVal4')">+</button>
         </div>
         <div class="shapeT tier5" id="t5">
-            <button class="value_button" type="button">-</button>
-            <button class="value_button" type="button">+</button>
+            <button class="value_button" type="button" id="b5M" onclick="button_handler(-1, 'dispVal5')">-</button>
+            <div class="disp_val" id="dispVal5">0</div>
+            <button class="value_button" type="button" id="b5P" onclick="button_handler(1, 'dispVal5')">+</button>
         </div>
         <div class="shapeT tier6" id="t6">
-            <button class="value_button" type="button">-</button>
-            <button class="value_button" type="button">+</button>
+            <button class="value_button" type="button" id="b6M" onclick="button_handler(-1, 'dispVal6')">-</button>
+            <div class="disp_val" id="dispVal6">0</div>
+            <button class="value_button" type="button" id="b6P" onclick="button_handler(1, 'dispVal6')">+</button>
         </div>
     </div>
     <div class="centered">

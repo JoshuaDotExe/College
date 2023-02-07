@@ -15,14 +15,15 @@
 }
 
 .pyramid_container{
-    height:750px;
+    height:800px;
     display: grid;
     justify-items: center;
-    clip-path: polygon(50% 0%, 50% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(50% 0%, 50% 0%, 80% 100%, 20% 100%);
 }
 
 .tier1{
     background-color: red;
+    padding-bottom: 0px;
     margin-bottom: 10px;
 }
 
@@ -36,7 +37,7 @@
 }
 
 .tier4{
-    background-color: green;
+    background-color: lime;
 }
 
 .tier5{
@@ -44,7 +45,7 @@
 }
 
 .tier6{
-    background-color: navy;
+    background-color: blue;
 }
 
 .date_container{
@@ -52,10 +53,19 @@
 }
 
 .value_button{
+    position: static;
     height:30px;
     width:30px;
     background-color: gray;
+    z-index: 10;
 }
-body{
-    
+
+.disp_val{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:30px;
+    height:30px;
+    background-color: rgb(177, 177, 177);
+    border-radius: 15px;
 }
