@@ -10,7 +10,45 @@
 </head>
 <body>
     <h1 class="centered" id="pyramidHeader"">My Pyramid</h1>
-    <div class="centered" id="foodPyramid">Pyramid</div>
-    <div class="centered" id="dateInput">Date</div>
+    <div class="centered pyramid_container">
+        <div class="shapeT tier1" id="t1">
+            <button class="value_button" type="button">-</button>
+            <button class="value_button" type="button">+</button>
+        </div>
+        <div class="shapeT tier2" id="t2">
+            <button class="value_button" type="button">-</button>
+            <button class="value_button" type="button">+</button>
+        </div>
+        <div class="shapeT tier3" id="t3">
+            <button class="value_button" type="button">-</button>
+            <button class="value_button" type="button">+</button>
+        </div>
+        <div class="shapeT tier4" id="t4">
+            <button class="value_button" type="button">-</button>
+            <button class="value_button" type="button">+</button>
+        </div>
+        <div class="shapeT tier5" id="t5">
+            <button class="value_button" type="button">-</button>
+            <button class="value_button" type="button">+</button>
+        </div>
+        <div class="shapeT tier6" id="t6">
+            <button class="value_button" type="button">-</button>
+            <button class="value_button" type="button">+</button>
+        </div>
+    </div>
+    <div class="centered">
+        <div class="date_container">
+            <div class="date_input_container">
+                <input type="date" id="date_input">
+                <script>
+                    var dt = new Date();
+                    document.getElementById('date_input').innerHTML=dt;
+                </script>
+            </div>
+            <div class="date_display">
+                <h2></h2>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
