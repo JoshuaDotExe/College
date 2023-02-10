@@ -8,3 +8,8 @@ function button_handler(modifier, target){
     document.getElementById(target).innerHTML=String(tempNum+modifier);
 }
 
+function display_date_handler(){
+    console.log(document.getElementById("date_input").textContent);
+}
+
+display_date_handler();

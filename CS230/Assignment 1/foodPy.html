@@ -4,55 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Food Pyramid</title>
     <link rel="stylesheet" href="foodPy.css">
     <script src="foodPy.js" defer></script>
 </head>
 <body>
-    <h1 class="centered" id="pyramidHeader"">My Pyramid</h1>
-    <div class="centered pyramid_container">
-        <div class="shapeT tier1" id="t1">
-            <button class="value_button" type="button" id="b1M" onclick="button_handler(-1, 'dispVal1')"">-</button>
+    <div class="container">
+        <div class="aH1">
+            <h1 class="centered pyramidHeader" id="pyramidHead"">Food Pyramid</h1>
+        </div>
+        <div class="aMB">
+            <button class="value_button bT1" type="button" id="b1M" onclick="button_handler(-1, 'dispVal1')">-</button>
+            <button class="value_button bT2" type="button" id="b2M" onclick="button_handler(-1, 'dispVal2')">-</button>
+            <button class="value_button bT3" type="button" id="b3M" onclick="button_handler(-1, 'dispVal3')">-</button>
+            <button class="value_button bT4" type="button" id="b4M" onclick="button_handler(-1, 'dispVal4')">-</button>
+            <button class="value_button bT5" type="button" id="b5M" onclick="button_handler(-1, 'dispVal5')">-</button>
+            <button class="value_button bT6" type="button" id="b6M" onclick="button_handler(-1, 'dispVal6')">-</button>
+        </div>
+        <div class="aPB">
+            <button class="value_button bT1" type="button" id="b1P" onclick="button_handler(1, 'dispVal1')">+</button>
+            <button class="value_button bT2" type="button" id="b2P" onclick="button_handler(1, 'dispVal2')">+</button>
+            <button class="value_button bT3" type="button" id="b3P" onclick="button_handler(1, 'dispVal3')">+</button>
+            <button class="value_button bT4" type="button" id="b4P" onclick="button_handler(1, 'dispVal4')">+</button>
+            <button class="value_button bT5" type="button" id="b5P" onclick="button_handler(1, 'dispVal5')">+</button>
+            <button class="value_button bT6" type="button" id="b6P" onclick="button_handler(1, 'dispVal6')">+</button>
+        </div>
+        <div class="aDisp">
             <div class="disp_val" id="dispVal1">0</div>
-            <button class="value_button" type="button" id="b1P" onclick="button_handler(1, 'dispVal1')">+</button>
-        </div>
-        <div class="shapeT tier2" id="t2">
-            <button class="value_button" type="button" id="b2M" onclick="button_handler(-1, 'dispVal2')">-</button>
             <div class="disp_val" id="dispVal2">0</div>
-            <button class="value_button" type="button" id="b2P" onclick="button_handler(1, 'dispVal2')">+</button>
-        </div>
-        <div class="shapeT tier3" id="t3">
-            <button class="value_button" type="button" id="b3M" onclick="button_handler(-1, 'dispVal3')">-</button>
             <div class="disp_val" id="dispVal3">0</div>
-            <button class="value_button" type="button" id="b3P" onclick="button_handler(1, 'dispVal3')">+</button>
-        </div>
-        <div class="shapeT tier4" id="t4">
-            <button class="value_button" type="button" id="b4M" onclick="button_handler(-1, 'dispVal4')">-</button>
             <div class="disp_val" id="dispVal4">0</div>
-            <button class="value_button" type="button" id="b4P" onclick="button_handler(1, 'dispVal4')">+</button>
-        </div>
-        <div class="shapeT tier5" id="t5">
-            <button class="value_button" type="button" id="b5M" onclick="button_handler(-1, 'dispVal5')">-</button>
             <div class="disp_val" id="dispVal5">0</div>
-            <button class="value_button" type="button" id="b5P" onclick="button_handler(1, 'dispVal5')">+</button>
-        </div>
-        <div class="shapeT tier6" id="t6">
-            <button class="value_button" type="button" id="b6M" onclick="button_handler(-1, 'dispVal6')">-</button>
             <div class="disp_val" id="dispVal6">0</div>
-            <button class="value_button" type="button" id="b6P" onclick="button_handler(1, 'dispVal6')">+</button>
         </div>
-    </div>
-    <div class="centered">
-        <div class="date_container">
-            <div class="date_input_container">
+        <div class="aPy">
+            <div class="shapeT tier1" id="t1"></div>
+            <div class="shapeT tier2" id="t2"></div>
+            <div class="shapeT tier3" id="t3"></div>
+            <div class="shapeT tier4" id="t4"></div>
+            <div class="shapeT tier5" id="t5"></div>
+            <div class="shapeT tier6" id="t6"></div>
+        </div>
+        <div class="aDate">
+            <div class="centered date_input_container">
                 <input type="date" id="date_input">
                 <script>
                     var dt = new Date();
                     document.getElementById('date_input').innerHTML=dt;
                 </script>
             </div>
-            <div class="date_display">
-                <h2></h2>
+            <div class="centered date_display_container">
+                <h3 id="date_display_h2"></h3>
+                <script>
+                    var dt = document.getElementById("date_input").textContent;
+                    document.getElementById("date_display_h2").textContent = dt.substring(0, dt.lastIndexOf("GMT"));
+                </script>
             </div>
         </div>
     </div>
