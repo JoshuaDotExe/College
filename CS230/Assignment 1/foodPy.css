@@ -1,28 +1,12 @@
 
 .container {  display: grid;
     grid-template-columns: 0.6fr 2.0fr 0.1fr 0.1fr 0.1fr 2fr 0.6fr;
-    grid-template-rows: 0.2fr 2fr 0.5fr;
+    grid-template-rows: 0.2fr 2fr 0.2fr;
     grid-auto-flow: row;
 }
   
 .aH1 {
     grid-area: 1 / 3 / 2 / 6;}
-  
-.aMB { 
-    z-index: 2;
-    grid-area: 2 / 3 / 3 / 4;
-    display:grid;
-    justify-items: center;
-    align-items: center;
-}
-  
-.aPB { 
-    z-index: 2;
-    grid-area: 2 / 5 / 3 / 6;
-    display:grid;
-    justify-items: center;
-    align-items: center;
-}
   
 .aDisp { 
     z-index: 2;
@@ -31,14 +15,25 @@
     justify-items: center;
     align-items: center;
 }
-  
-.aPy {
-    width:1.8fr;
+
+.buttonContainer{
+    height:700px;
     display: grid;
+    grid-template-columns: 1fr 0.2fr 0.2fr 0.2fr 1fr;
+    grid-template-rows: 1fr 0.1fr 1fr 0.1fr 1fr 1fr 1fr 1fr;
     justify-items: center;
-    clip-path: polygon(50% 0%, 50% 0%, 80% 100%, 20% 100%);
-    z-index: 1;
-    grid-area: 2 / 2 / 3 / 7; }
+    grid-area: 2 / 2 / 3 / 7;
+}
+
+.aPy {
+    height:700px;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 0.2fr 0.2fr 1fr;
+    grid-template-rows: 1fr 0.1fr 1fr 0.1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    clip-path: polygon(50% 0%, 50% 0%, 100% 100%, 0% 100%);
+    grid-area: 2 / 2 / 3 / 7;
+}
   
 .aDate { 
     margin-top: 20px;
@@ -59,46 +54,62 @@
 }
 
 .shapeT {
-	width:1000px;
-    height:100px;
+	width:100%;
     display:flex;
     justify-content: center;
     align-items: center;
 }
 
-.tier1{
+.bTier1 { grid-area: 1 / 1 / 2 / 6; }
+.bTier2 { grid-area: 3 / 1 / 4 / 6; }
+.bTier3 { grid-area: 5 / 1 / 6 / 6; }
+.bTier4 { grid-area: 6 / 1 / 7 / 6; }
+.bTier5 { grid-area: 7 / 1 / 8 / 6; }
+.bTier6 { grid-area: 8 / 1 / 9 / 6; }
+
+.tier1 { grid-area: 1 / 1 / 2 / 6;
     background-color: red;
-    margin-bottom: 10px;
 }
-
-.tier2{
+.tier2 { grid-area: 3 / 1 / 4 / 6;
     background-color: orange;
-    margin-bottom: 10px;
 }
-
-.tier3{
+.tier3 { grid-area: 5 / 1 / 6 / 6;
     background-color: yellow;
 }
-
-.tier4{
+.tier4 { grid-area: 6 / 1 / 7 / 6;
     background-color: lime;
 }
-
-.tier5{
+.tier5 { grid-area: 7 / 1 / 8 / 6;
     background-color: cyan;
 }
-
-.tier6{
+.tier6 { grid-area: 8 / 1 / 9 / 6;
     background-color: blue;
 }
+.tierSpace{
+    margin-bottom: 10px;
+}
+  
+
 
 .value_button{
-    margin-top: 35px;
-    margin-bottom: 35px;
+
     height:30px;
     width:30px;
-    background-color: gray;
+    background-color: rgb(138, 139, 151);
     border-radius: 15px;
+}
+
+@keyframes butMargIn{
+    from{margin-top: 0px;
+         margin-bottom: 0px;}
+    to{margin-top: 60px;
+        margin-bottom: 60px;}
+}
+@keyframes butMargOut{
+    from{margin-top: 60px;
+        margin-bottom: 60px;}
+   to{margin-top: 0px;
+       margin-bottom: 0px;}
 }
 
 .disp_val{
@@ -107,11 +118,60 @@
     align-items: center;
     width:30px;
     height:30px;
-    background-color: rgb(177, 177, 177);
+    background-color: rgb(189, 193, 202);
     border-radius: 15px;
 }
 
 .date_container{
     margin:10px;
     grid-column: 1/2;
+}
+
+.bT1{
+    display: none;
+    animation-direction: reverse;
+}
+.bT2{
+    display: none;
+    animation: butMargOut 0.1s normal;
+}
+.bT3{
+    display: none;
+    animation: butMargOut 0.1s forwards;
+}
+.bT4{
+    display: none;
+    animation: butMargOut 0.1s forwards;
+}
+.bT5{
+    display: none;
+    animation: butMargOut 0.1s forwards;
+}
+.bT6{
+    display: none;
+    animation: butMargOut 0.1s forwards;
+}
+.tier1:hover .bT1{
+    display: block;
+    animation: butMargIn 0.1s forwards;
+}
+.tier2:hover .bT2{
+    display: block;
+    animation: butMargIn 0.1s forwards;
+}
+.tier3:hover .bT3{
+    display: block;
+    animation: butMargIn 0.1s forwards;
+}
+.tier4:hover .bT4{
+    display: block;
+    animation: butMargIn 0.1s forwards;
+}
+.tier5:hover .bT5{
+    display: block;
+    animation: butMargIn 0.1s forwards;
+}
+.tier6:hover .bT6{
+    display: block;
+    animation: butMargIn 0.1s forwards;
 }
